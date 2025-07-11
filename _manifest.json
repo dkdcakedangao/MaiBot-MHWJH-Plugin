@@ -1,6 +1,6 @@
 {
   "manifest_version": 1,
-  "name": "喵内的怪物猎人集会码插件",
+  "name": "麦麦的怪物猎人集会码插件",
   "version": "1.0.0",
   "description": "提供怪物猎人集会码的登记、查询和删除功能，支持多群组隔离管理",
   "author": {
