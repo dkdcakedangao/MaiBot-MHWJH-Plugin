@@ -75,7 +75,7 @@ class MHWJHAction(BaseAction):
         """登记集会码"""
         content = self.action_data.get("REG_jhm", "").strip()
         if not content:
-            await self.send_text(f"【{safe_group}】喵内记不住空气啦~~")
+            await self.send_text(f"【{safe_group}】记不住空气啦~~")
             return False, "空集会码"
         
         # 读取现有记录
@@ -162,7 +162,7 @@ class MHWJHAction(BaseAction):
         if del_param == "ALL":
             if note_file.exists():
                 note_file.unlink()
-            await self.send_text(f"【{safe_group}】喵内把集会码忘光光了喵~")
+            await self.send_text(f"【{safe_group}】把集会码忘光光了喵~")
             return True, "全部删除成功"
         
         # 处理指定行删除
@@ -228,7 +228,7 @@ class MHWJHRegisterCommand(BaseCommand):
             safe_group = self.message.chat_stream.group_info.group_name
             
             if not content:
-                await self.send_text(f"【{safe_group}】喵内记不住空气啦~~")
+                await self.send_text(f"【{safe_group}】记不住空气啦~~")
                 return False, "空集会码", False
             
             # 从配置获取数据
@@ -374,7 +374,7 @@ class MHWJHDeleteCommand(BaseCommand):
             if del_param == "ALL":
                 if note_file.exists():
                     note_file.unlink()
-                await self.send_text(f"【{safe_group}】喵内把集会码忘光光了喵~")
+                await self.send_text(f"【{safe_group}】把集会码忘光光了喵~")
                 return True, "全部删除成功", False
             
             # 处理指定行删除
@@ -382,6 +382,7 @@ class MHWJHDeleteCommand(BaseCommand):
                 line_numbers = [int(num.strip()) for num in del_param.split(",") if num.strip().isdigit()]
                 if not line_numbers:
                     raise ValueError("无效的行号")
+                
             except:
                 await self.send_text(f"【{safe_group}】出现了奇奇怪怪的错误喵~可以再尝试一次喵~")
                 return False, "无效的行号格式", False
