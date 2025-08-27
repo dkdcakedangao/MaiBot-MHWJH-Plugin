@@ -9,7 +9,7 @@
   },
   "license": "GPL-v3.0-or-later",
   "keywords": ["怪物猎人", "集会码", "游戏", "MHW", "集会"],
-  "categories": ["游戏", "实用工具"],
+  "categories": ["Entertainment & Interaction", "Utility Tools"],
   "repository_url": "https://github.com/dkdcakedangao/MaiBot-MHWJH-Plugin",
   "default_locale": "zh-CN",
   "locales_path": "_locales",
